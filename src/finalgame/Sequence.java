@@ -14,7 +14,7 @@ import java.util.Scanner;
 /**
  *
  * @author mikeb
- */
+ 
 public class Sequence {
 
     public static String One() {
@@ -30,18 +30,18 @@ public class Sequence {
         } catch (InterruptedException e) {
 
         }
-        System.out.println("On this journey you will defeat monsters until"
-                + " you earn enough coins to purchase the Sword of Destiny and "
+        System.out.println("On this journey you will defeat monsters until\n"
+                + "you earn enough coins to purchase\n the Sword of Destiny and "
                 + "use it to kill the Evil Queen.");
         try {
             Thread.sleep(4000);
         } catch (InterruptedException e) {
 
         }
-        System.out.println("");
-        System.out.println("Everytime you slaughter one of the Queen's monsters "
-                + "they wil drop a random amount of coins. Once you have "
-                + "collected 100 coins I will take you to the Black Smith "
+        System.out.println();
+        System.out.println("Everytime you slaughter one of the Queen's monsters\n "
+                + "they wil drop a random amount of coins. Once you have\n "
+                + "collected 100 coins I will take you to the Black Smith\n "
                 + "and we will pay him to forge the sword.");
         try {
             Thread.sleep(5000);
@@ -66,7 +66,7 @@ public class Sequence {
         int numb;
         int nMH = 0;
         int nCH = 0;
-        mon = rand.nextInt(6);
+        mon = rand.nextInt(7);
 
         if (mon <= 3) {
             System.out.println("It's a Goblin!");
@@ -84,7 +84,8 @@ public class Sequence {
             System.out.println("What do you want to do now?\n1: Attack\n2: Heal");
             System.out.print(":");
             numb = input.nextInt();
-            nMH += Monster.getHealth();
+            nMH = Monster.getHealth();
+            nCH = Character.getHealth();
             switch (numb) {
                 case 1:
                     if (nMH > 0) {
@@ -99,30 +100,31 @@ public class Sequence {
                     }
                     break;
                 case 2:
-                    nCH += Character.getHealth();
+                    nCH = Character.getHealth();
                     nCH += 25;
                     Character.setHealth(nCH);
                     System.out.printf("Your Health is now at %d\n", nCH);
                     break;
-
+                    
                 default:
                     System.out.println("Invalid option\n You loose a turn for "
                             + "being a little bitch again");
                     break;
             }
             if (nMH > 0) {
-                System.out.println("The monster attacked you!\n");
-
+                System.out.println("The monster attacked you!");
+                
             } else {
                 System.out.printf("You did %d damage\n",
                         Character.getAttack());
                 nMH -= Character.getAttack();
-            }
+           }
+            
             if (nMH <= 0) {
                 System.out.printf("The monster is dead\n");
             } else {
                 Random seq = new Random();
-                int x = seq.nextInt(50);
+                int x = seq.nextInt(40);
                 int s = Character.getSpeed();
                 if (s > x) {
                     System.out.print("The enemies attack missed!\n");
@@ -136,6 +138,7 @@ public class Sequence {
 
                 }
             }
+            
         }
 
         return ("");
@@ -169,4 +172,4 @@ public class Sequence {
 
         return ("");
     }
-}
+}**/

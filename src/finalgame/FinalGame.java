@@ -24,15 +24,20 @@ public class FinalGame {
         System.out.printf(Sequence.One());
         while (bank < 100) {
             Runtime.getRuntime().gc();
-            System.out.printf(Sequence.Attack());
+            System.out.printf(altSequence.Attack());//change to alt seq
+            //Monster.getHealth();
+            //if (Monster.getHealth ()<= 0) //I'm trying to find a way to reference the monter's health so it will only reward a
+                //character if the monster dies, not when you heal
+            
             Random rand2 = new Random();
             prize = rand2.nextInt(10) + 16;
             System.out.printf("You earned %d coins for defeating the monster!\n",
                     prize);
             bank += prize;
+            
         }
-        System.out.println(Sequence.Two());
-        System.out.println(Sequence.bossFight());
+        System.out.println(altSequence.Two());
+        System.out.println(altSequence.bossFight());
 //okay
     }
 

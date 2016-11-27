@@ -57,7 +57,7 @@ public class Character {
         System.out.println("1: Titan");
         System.out.println("2: Hunter");
         System.out.println("3: Warlock");
-        System.out.print(": ");
+        System.out.print(" : ");
         number = input.nextInt();
 
         Character myCharacter = new Character("Titan", 20, 100, 5);
