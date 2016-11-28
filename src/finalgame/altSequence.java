@@ -31,7 +31,7 @@ public class altSequence {
 
         }
         System.out.println("On this journey you will defeat monsters\nuntil"
-                + "you earn enough coins to purchase\nthe Sword of Destiny and "
+                + " you earn enough coins to purchase\nthe Sword of Destiny and "
                 + "use it to kill the Evil Queen.");
         try {
             Thread.sleep(4000);
@@ -66,6 +66,7 @@ public class altSequence {
         int numb;
         int nMH = 0;
         int nCH = 0;
+        int bank;
         mon = rand.nextInt(7);
 
         if (mon <= 3) {
@@ -88,14 +89,15 @@ public class altSequence {
             nCH = Character.getHealth();
             switch (numb) {
                 case 1:
-                    if (nMH > 0) {
+                    while (nMH > 0) { 
                         System.out.printf("You did %d damage\n",
                                 Character.getAttack());
                         nMH -= Character.getAttack();
                         System.out.println("The monster attacked you");
-                         Random seq = new Random();
+                Random seq = new Random();
                 int x = seq.nextInt(60);
                 int s = Character.getSpeed();
+                
                 if (s > x) {
                     System.out.print("The enemies attack missed!\n");
                 } else {
@@ -107,10 +109,7 @@ public class altSequence {
                 } catch (InterruptedException e) {
 
                 }
-                    if (nMH <= 0) {
-                            System.out.printf("The monster is dead\n");// this code is never executed 
-                        }
-                    
+                                    
                     }
                     break;
                 case 2:
@@ -125,33 +124,10 @@ public class altSequence {
                             + "being a little bitch again");
                     break;
             }
-            //if (nMH > 0) {
-                //System.out.println("The monster attacked you!");
-                
-            //} //else {
-                //System.out.printf("You did %d damage\n",
-                        //Character.getAttack());
-                //nMH -= Character.getAttack();
-           //}
-            
-            //if (nMH <= 0) {
-                //System.out.printf("The monster is dead\n");
-            /*} else {
-                Random seq = new Random();
-                int x = seq.nextInt(40);
-                int s = Character.getSpeed();
-                if (s > x) {
-                    System.out.print("The enemies attack missed!\n");
-                } else {
-                    nCH -= Monster.getAttack();
-                    System.out.printf("Health = %d\n", nCH);
-                }
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-
-                }
-            }*/
+            if (nMH <= 0) {
+               System.out.printf("You slayed the monster\n");
+               Character.getPrize();
+            }
             
         }
 

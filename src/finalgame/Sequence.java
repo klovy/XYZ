@@ -11,9 +11,8 @@ import static finalgame.Character.getSpeed;
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- *
- * @author mikeb
+
+ 
  
 public class Sequence {
 
@@ -172,4 +171,4 @@ public class Sequence {
 
         return ("");
     }
-}**/
+}

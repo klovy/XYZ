@@ -1,5 +1,6 @@
 package finalgame;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /*
@@ -18,6 +19,8 @@ public class Character {
     private static int attack;
     private static int health;
     private static int speed;
+    private static int prize = 0;
+    
 
     //constructors
     public Character(String type, int attack, int health, int speed) {
@@ -25,11 +28,20 @@ public class Character {
         this.attack = attack;
         this.health = health;
         this.speed = speed;
+        
     }
 
     //methods
     public String getType() {
         return type;
+    }
+    
+    public static int getPrize(){
+        Random rand2 = new Random();
+            prize = rand2.nextInt(10) + 16;
+            System.out.printf("You earned %d coins for defeating the monster!\n",
+                prize);
+            return prize;
     }
 
     public static int getAttack() {
