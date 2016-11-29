@@ -62,11 +62,9 @@ public class altSequence {
         Random rand = new Random();
         Scanner input = new Scanner(System.in);
         int mon;
-        int prize;
         int numb;
         int nMH = 0;
-        int nCH = 0;
-        int bank;
+        int nCH = Character.getHealth();
         mon = rand.nextInt(7);
         
         while(nCH<=0){
