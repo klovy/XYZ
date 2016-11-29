@@ -69,9 +69,11 @@ public class altSequence {
         int bank;
         mon = rand.nextInt(7);
         
-        for(nCH=0;nCH<=0;nCH++){
+        while(nCH<=0){
         nCH = Character.getHealth();
+        
         }
+        
         if (mon <= 3) {
             System.out.println("It's a Goblin!");
             Monster monster = new Monster("Goblin", 5, 15, 5);
@@ -120,7 +122,7 @@ public class altSequence {
                 } catch (InterruptedException e) {
 
                 }
-                                    
+                                     
                     }
                     break;
                 case 2:
@@ -135,7 +137,7 @@ public class altSequence {
             }
             if (nMH <= 0) {
                System.out.printf("You slayed the monster\n");
-               Character.getPrize();
+               Character.setPrize();
             }
             
         }
