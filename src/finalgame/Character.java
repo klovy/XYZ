@@ -23,11 +23,11 @@ public class Character {
     
 
     //constructors
-    public static void newCharacter(String type, int attack, int health, int speed) {
-        type = type;
-        attack = attack;
-        health = health;
-        speed = speed;
+    public static void newCharacter(String t, int a, int h, int s) {
+        type = t;
+        attack = a;
+        health = h;
+        speed = s;
         
     }
 
@@ -116,6 +116,7 @@ public class Character {
 
     public static void heal(int up)
     {
+        
         health += up;
     }
 
