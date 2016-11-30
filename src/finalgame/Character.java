@@ -37,11 +37,15 @@ public class Character {
     }
     
     public static int getPrize(){
+        
+            return prize;
+    }
+    public static int setPrize(){
         Random rand2 = new Random();
             prize = rand2.nextInt(10) + 16;
             System.out.printf("You earned %d coins for defeating the monster!\n",
                 prize);
-            return prize;
+        return prize;
     }
 
     public static int getAttack() {
