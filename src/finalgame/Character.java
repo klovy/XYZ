@@ -23,16 +23,16 @@ public class Character {
     
 
     //constructors
-    public Character(String type, int attack, int health, int speed) {
-        this.type = type;
-        this.attack = attack;
-        this.health = health;
-        this.speed = speed;
+    public static void newCharacter(String type, int attack, int health, int speed) {
+        type = type;
+        attack = attack;
+        health = health;
+        speed = speed;
         
     }
 
     //methods
-    public String getType() {
+    public static String getType() {
         return type;
     }
     
@@ -67,7 +67,7 @@ public class Character {
     public static String generateChar() {
         Scanner input = new Scanner(System.in);
         int number;
-        int bank = 0;
+        
 
         System.out.println("What class will you be?");
         System.out.println("1: Titan");
@@ -76,46 +76,57 @@ public class Character {
         System.out.print(" : ");
         number = input.nextInt();
 
-        Character myCharacter = new Character("Titan", 20, 100, 5);
+        newCharacter("Titan", 20, 100, 5);
 
+        
         switch (number) {
             case 1: {
                 System.out.println("Congratulations! You have chosen the "
                         + " mighty Titan.");
-                myCharacter = new Character("Titan", 20, 100, 5);
+                newCharacter("Titan", 20, 100, 5);
                 break;
             }
             case 2: {
                 System.out.println("Congratulations! You have chosen the"
                         + " brave Hunter.");
-                myCharacter = new Character("Hunter", 10, 50, 20);
+                newCharacter("Hunter", 10, 50, 20);
                 break;
             }
             case 3: {
                 System.out.println("Congratulations! You have chosen the"
                         + " fierce Warlock");
-                myCharacter = new Character("Warlock", 15, 75, 15);
+                newCharacter("Warlock", 15, 75, 15);
                 break;
             }
             case 31337: {
                 System.out.println("..........");
                 System.out.println("You have unlocked a secret character.....");
-                myCharacter = new Character("Master", 30, 300, 30);
+                newCharacter("Master", 30, 300, 30);
                 break;
             }
             default: {
                 System.out.println("Invalid input");
                 System.out.println("If you want to be a little bitch then you "
                         + "can play as a little bitch");
-                myCharacter = new Character("Little Bitch", 5, 5, 0);
+                newCharacter("Little Bitch", 5, 5, 0);
             }
         }
-        return myCharacter.toString();
+        return toText();
     }
 
-    @Override
-    public String toString() {
+    public static void heal(int up)
+    {
+        health += up;
+    }
+
+    public static void damage(int down)
+    {
+        health -= down;
+    }
+
+    
+    public static String toText() {
         return String.format("%s, Attack = %d, Health = %d, Speed = %d\n",
-                getType(), getAttack(), getHealth(), getSpeed());
+                type, attack, health, speed);
     }
 }
