@@ -101,7 +101,7 @@ public class altSequence {
                     Character.damage( Monster.getAttack());
                     System.out.printf("Health = %d\n", Character.getHealth());
                 }
-                if(nCH<=0 ){
+                if(Character.getHealth()<=0 ){
                     System.out.println("You have been defeated");
                     try {
                     Thread.sleep(2000);
@@ -119,7 +119,7 @@ public class altSequence {
                     }
                     break;
                 case 2:
-                    Character.heal(+15);
+                    Character.heal(15);
                     System.out.printf("Your Health is now at %d\n", nCH);
                     break;
                     
