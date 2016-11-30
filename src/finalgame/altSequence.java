@@ -64,14 +64,9 @@ public class altSequence {
         int mon;
         int numb;
         int nMH = 0;
-        int nCH = Character.getHealth();
+        int nCH = 0;
         mon = rand.nextInt(7);
-        
-        while(nCH<=0){
-        nCH = Character.getHealth();
-        
-        }
-        
+                
         if (mon <= 3) {
             System.out.println("It's a Goblin!");
             Monster monster = new Monster("Goblin", 5, 15, 5);
@@ -103,8 +98,8 @@ public class altSequence {
                 if (s > x) {
                     System.out.print("The enemies attack missed!\n");
                 } else {
-                    nCH -= Monster.getAttack();
-                    System.out.printf("Health = %d\n", nCH);
+                    Character.damage( Monster.getAttack());
+                    System.out.printf("Health = %d\n", Character.getHealth());
                 }
                 if(nCH<=0 ){
                     System.out.println("You have been defeated");
@@ -124,7 +119,7 @@ public class altSequence {
                     }
                     break;
                 case 2:
-                    Character.setHealth(nCH+=15);
+                    Character.heal(+15);
                     System.out.printf("Your Health is now at %d\n", nCH);
                     break;
                     
