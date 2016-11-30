@@ -25,11 +25,10 @@ public class FinalGame {
         
         System.out.printf(Character.generateChar());
         System.out.printf(altSequence.One());
-        while ( bank < 100) {
-            bank +=prize;
+        while ( bank <= 100) {
             Runtime.getRuntime().gc();
-            System.out.printf(altSequence.Attack());//change to alt seq
-            
+            System.out.printf(altSequence.Attack());
+            bank+=Character.getPrize();            
            
         }
         System.out.println(Sequence.Two());
