@@ -116,7 +116,6 @@ public class Character {
 
     public static void heal(int up)
     {
-        
         health += up;
     }
 
