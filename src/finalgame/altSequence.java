@@ -120,7 +120,8 @@ public class altSequence {
                     break;
                 case 2:
                     Character.heal(15);
-                    System.out.printf("Your Health is now at %d\n", nCH);
+                    System.out.printf("Your Health is now at %d\n",
+                            Character.getHealth());
                     break;
                     
                 default:
