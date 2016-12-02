@@ -5,9 +5,6 @@
  */
 package finalgame;
 
-import static finalgame.Character.getAttack;
-import static finalgame.Character.getHealth;
-import static finalgame.Character.getSpeed;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.ArrayList; 
@@ -81,15 +78,7 @@ public class altSequence {
             System.out.println("Oh Shit! It's a Knight!");
             Monster monster = new Monster("Knight", 20, 20, 10);
         }
-         
-    //    if (mon <= 3)
-    //        mArray.add("Goblin");
-    //    else if ((mon > 3) && (mon <=5))
-    //        mArray.add("Ogre");
-    //    else
-    //        mArray.add("Knight");
-                
-        
+               
         while (nMH > 0);
         {   
 
