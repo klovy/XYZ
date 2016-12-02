@@ -10,12 +10,16 @@ import static finalgame.Character.getHealth;
 import static finalgame.Character.getSpeed;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.ArrayList; 
+import java.util.List;
+
 
 /**
  *
  * @author mikeb
  */
 public class altSequence {
+    private static List<String> mArray = new ArrayList<String>();
 
     public static String One() {
         System.out.println(".....");
@@ -77,10 +81,19 @@ public class altSequence {
             System.out.println("Oh Shit! It's a Knight!");
             Monster monster = new Monster("Knight", 20, 20, 10);
         }
+         
+    //    if (mon <= 3)
+    //        mArray.add("Goblin");
+    //    else if ((mon > 3) && (mon <=5))
+    //        mArray.add("Ogre");
+    //    else
+    //        mArray.add("Knight");
+                
+        
         while (nMH > 0);
         {   
 
-            System.out.println("What do you want to do now?\n1: Attack\n2: Heal");
+            System.out.println("What do you want to do now?\n1: Attack\n2: Run and Heal");
             System.out.print(" : ");
             numb = input.nextInt();
             nMH = Monster.getHealth();
@@ -100,6 +113,9 @@ public class altSequence {
                 } else {
                     Character.damage( Monster.getAttack());
                     System.out.printf("Health = %d\n", Character.getHealth());
+                if (Character.getHealth()<= 0){
+                        System.out.println("You failed");
+                    }
                 }
                 if(Character.getHealth()<=0 ){
                     System.out.println("You have been defeated");
@@ -108,6 +124,8 @@ public class altSequence {
                 } catch (InterruptedException e) {
 
                 }
+                    System.out.println("You killed");
+                    System.out.println(mArray);
                     System.exit(0);
                 }
                 try {
@@ -132,6 +150,13 @@ public class altSequence {
             if (nMH <= 0) {
                System.out.printf("You slayed the monster\n");
                Character.setPrize();
+               
+                if (mon <= 3)
+                    mArray.add("Goblin");
+                    else if ((mon > 3 || mon <=5))
+                         mArray.add("Ogre");
+                        else
+                            mArray.add("Knight");
             }
             
         }
