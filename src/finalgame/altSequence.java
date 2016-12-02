@@ -113,7 +113,7 @@ public class altSequence {
                 } catch (InterruptedException e) {
 
                 }
-                    System.out.println("You killed");
+                    System.out.println("You sayed these Monsters");
                     System.out.println(mArray);
                     System.exit(0);
                 }
