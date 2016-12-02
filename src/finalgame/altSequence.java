@@ -178,6 +178,12 @@ public class altSequence {
 
     public static String bossFight() {
         Monster boss = new Monster("Evil Queen", 20, 50, 15);
+        System.out.println("As the Evil Queen approaches you can feel your\n"
+                + "power growing. The Sword of Destiny has have given you\n"
+                + "50 extra health");
+        Character.heal(50); //adds 50 to any characters health
+        System.out.println(Character.getHealth());
+        
 
         return ("");
     }
