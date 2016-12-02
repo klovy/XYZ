@@ -34,7 +34,8 @@ public class FinalGame {
         System.out.println("You have killed");
         System.out.println(altSequence.mArray);
         System.out.println(Sequence.Two());
-        System.out.println(Sequence.bossFight());
+        altSequence.bossFight();
+
 
     }
 

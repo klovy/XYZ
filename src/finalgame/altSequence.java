@@ -182,7 +182,8 @@ public class altSequence {
                 + "power growing. The Sword of Destiny has have given you\n"
                 + "50 extra health");
         Character.heal(50); //adds 50 to any characters health
-        System.out.println(Character.getHealth());
+        System.out.printf("Your Health is now %d" , Character.getHealth());
+        
         
 
         return ("");
