@@ -16,7 +16,7 @@ import java.util.List;
  * @author mikeb
  */
 public class altSequence {
-    private static List<String> mArray = new ArrayList<String>();
+    public static List<String> mArray = new ArrayList<String>();
 
     public static String One() {
         System.out.println(".....");

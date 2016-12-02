@@ -31,6 +31,8 @@ public class FinalGame {
             bank+=Character.getPrize();            
            
         }
+        System.out.println("You have killed");
+        System.out.println(altSequence.mArray);
         System.out.println(Sequence.Two());
         System.out.println(Sequence.bossFight());
 
