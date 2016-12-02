@@ -47,4 +47,8 @@ public class Monster {
     public int setHealth() {
         return health;
     }
+    public static void damage(int down)
+    {
+        health -= down;
+    }
 }

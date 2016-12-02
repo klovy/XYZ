@@ -85,13 +85,13 @@ public class altSequence {
             System.out.println("What do you want to do now?\n1: Attack\n2: Run and Heal");
             System.out.print(" : ");
             numb = input.nextInt();
-            nMH = Monster.getHealth();
+            //nMH = Monster.getHealth();
             switch (numb) {
                 case 1:
-                    while (nMH > 0) { 
+                    while (Monster.getHealth() > 0) { 
                         System.out.printf("You did %d damage\n",
                                 Character.getAttack());
-                        nMH -= Character.getAttack();
+                        Monster.damage(Character.getAttack());
                         System.out.println("The monster attacked you");
                 Random seq = new Random();
                 int x = seq.nextInt(60);
